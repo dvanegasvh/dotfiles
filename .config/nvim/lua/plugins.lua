@@ -27,11 +27,14 @@ packer.startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'glepnir/lspsaga.nvim' -- LSP UIs
     use 'L3MON4D3/LuaSnip'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
 
     --> Completion
     use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
     use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
     use 'hrsh7th/nvim-cmp' -- Completion
+    use "rafamadriz/friendly-snippets"
     -- use 'github/copilot.vim'
 
     --> Formatters
@@ -62,6 +65,7 @@ packer.startup(function(use)
     use 'dinhhuy258/git.nvim' -- For git blame & browse
     use 'kdheepak/lazygit.nvim'
 
+
     --> Tabs
     use 'akinsho/nvim-bufferline.lua'
 
@@ -71,6 +75,8 @@ packer.startup(function(use)
     use 'windwp/nvim-ts-autotag'
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/zen-mode.nvim'
+
+    use 'christoomey/vim-system-copy'
 
     use({
         "iamcco/markdown-preview.nvim",
