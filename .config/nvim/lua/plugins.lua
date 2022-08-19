@@ -6,47 +6,30 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+
     --> Packer
     use 'wbthomason/packer.nvim'
 
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+
     --> Themes
-    -- use {
-    --     'svrana/neosolarized.nvim',
-    --     requires = { 'tjdevries/colorbuddy.nvim' }
-    -- }
-    -- use 'shaunsingh/nord.nvim'
     use({ "olimorris/onedarkpro.nvim" })
     use "Shatur/neovim-ayu"
 
-
-    --> LSP and utils
-    use 'onsails/lspkind-nvim' -- vscode-like pictograms
+    --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
-    use 'neovim/nvim-lspconfig' -- LSP
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'glepnir/lspsaga.nvim' -- LSP UIs
-    use 'L3MON4D3/LuaSnip'
-    use 'hrsh7th/cmp-vsnip'
-    use 'hrsh7th/vim-vsnip'
-
-    --> Completion
-    use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-    use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-    use 'hrsh7th/nvim-cmp' -- Completion
-    use "rafamadriz/friendly-snippets"
+    use 'tpope/vim-surround'
     -- use 'github/copilot.vim'
 
-    --> Formatters
-    use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-    use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-    use 'tell-k/vim-autopep8'
+    --> Coc
+    use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
 
+    --> Formatters
+    use 'tell-k/vim-autopep8'
 
     --> File search
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
-
     use 'nvim-lualine/lualine.nvim' -- Statusline
 
     --> Syntax
@@ -65,7 +48,6 @@ packer.startup(function(use)
     use 'dinhhuy258/git.nvim' -- For git blame & browse
     use 'kdheepak/lazygit.nvim'
 
-
     --> Tabs
     use 'akinsho/nvim-bufferline.lua'
 
@@ -76,8 +58,14 @@ packer.startup(function(use)
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/zen-mode.nvim'
 
+
+    use 'fannheyward/telescope-coc.nvim'
+
+
+    --> Clipboard
     use 'christoomey/vim-system-copy'
 
+    --> Markdown
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,

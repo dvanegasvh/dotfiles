@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 local actions = require('telescope.actions')
@@ -13,13 +14,14 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
-      },
+        ["q"] = actions.close,
+        ["S"] = actions.select_vertical,
+      }
     },
   },
   extensions = {
     file_browser = {
-      theme = "dropdown",
+      theme = "ivy",
       -- disables netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       mappings = {
@@ -32,6 +34,7 @@ telescope.setup {
           ["N"] = fb_actions.create,
           ["R"] = fb_actions.rename,
           ["h"] = fb_actions.goto_parent_dir,
+          ['Y'] = fb_actions.copy,
           ["/"] = function()
             vim.cmd('startinsert')
           end
@@ -42,6 +45,7 @@ telescope.setup {
 }
 
 telescope.load_extension("file_browser")
+telescope.load_extension("coc")
 
 vim.keymap.set('n', ';f',
   function()
@@ -53,18 +57,18 @@ vim.keymap.set('n', ';f',
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
-vim.keymap.set('n', '\\\\', function()
+vim.keymap.set('n', ';b', function()
   builtin.buffers()
 end)
 vim.keymap.set('n', ';t', function()
   builtin.treesitter()
 end)
-vim.keymap.set('n', ';;', function()
-  builtin.resume()
-end)
-vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
-end)
+-- vim.keymap.set('n', ';;', function()
+--   builtin.resume()
+-- end)
+vim.keymap.set('n', ';a', ':Telescope coc diagnostics<cr>')
+vim.keymap.set('n', '<space>ca', ':Telescope coc line_code_actions<cr>')
+
 vim.keymap.set("n", "<space>nt", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",

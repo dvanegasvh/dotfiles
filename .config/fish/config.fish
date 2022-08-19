@@ -24,7 +24,7 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias g git
 alias t "~/./tmux-start.sh"
-alias mydot "cd ~/dotfiles-davvidsd/"
+alias dot "cd $HOME/dotfiles"
 alias py "python3"
 
 
