@@ -10,7 +10,7 @@ keymap.set('n', 'dw', 'vb"_d')
 
 
 --> New tab
-keymap.set('n', 'tn', ':tabnew .')
+keymap.set('n', 'tn', ':tabnew .<cr>')
 --> Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
@@ -40,6 +40,9 @@ keymap.set("n", "<space>rn", "<Plug>(coc-rename)", {})
 keymap.set("n", "<space>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 keymap.set("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 keymap.set("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
+-- keymap.set("i", "<TAB>", "coc#pum#visible() ? coc#pum#confirm() : '\tab'", {silent = true, expr = true, noremap = true})
 
 --> Execution
 keymap.set("n", ";;", execute_file )
+
+keymap.set("n", "<space>nt", ":NERDTreeFind<cr>")

@@ -7,8 +7,8 @@ ts.setup {
     disable = {},
   },
   indent = {
-    enable = true,
-    disable = { "python" },
+    enable = true ,
+    -- disable = { "python" },
   },
   ensure_installed = {
     "tsx",

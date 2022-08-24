@@ -7,16 +7,14 @@ set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -Ux EDITOR vim
 
-# bind \cg 'lazygit'
 bind \cn 'nvim $(fzf)'
-bind \cf 'fzf'
 bind \cl 'clear; commandline -f repaint'
+bind \cf 'fzf'
 bind \cy accept-autosuggestion execute
 bind \ct '~/./tmux-start.sh'
 alias next 'npm run dev'
 alias ns 'npm start'
-# alias code 'code-insiders'
-alias home "cd ~/"
+alias h "cd ~/"
 alias ni 'npm i'
 alias ls "ls -p -G"
 alias la "ls -A"
@@ -26,6 +24,7 @@ alias g git
 alias t "~/./tmux-start.sh"
 alias dot "cd $HOME/dotfiles"
 alias py "python3"
+
 
 
 if type -q exa

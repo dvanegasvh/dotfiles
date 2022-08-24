@@ -13,9 +13,11 @@ local groups = cb.groups
 local styles = cb.styles
 
 Color.new('black', '#001b21')
+Color.new('terminal', '#010e11')
 Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
 Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
+Group.new('Pmenu', groups.Normal, colors.terminal, styles.none) -- popup menu normal item
 
 local cError = groups.Error.fg
 local cInfo = groups.Information.fg

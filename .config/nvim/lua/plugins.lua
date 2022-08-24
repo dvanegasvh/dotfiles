@@ -11,14 +11,23 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+    use {
+        'svrana/neosolarized.nvim',
+        requires = { 'tjdevries/colorbuddy.nvim' }
+    }
+
+
+    use 'tpope/vim-sleuth'
+    -- use "sheerun/vim-polyglot"
 
     --> Themes
     use({ "olimorris/onedarkpro.nvim" })
     use "Shatur/neovim-ayu"
+    use("marko-cerovac/material.nvim")
+    use("christianchiarulli/nvcode-color-schemes.vim")
 
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
-    use 'tpope/vim-surround'
     -- use 'github/copilot.vim'
 
     --> Coc
@@ -29,8 +38,9 @@ packer.startup(function(use)
 
     --> File search
     use 'nvim-telescope/telescope.nvim'
-    use 'nvim-telescope/telescope-file-browser.nvim'
     use 'nvim-lualine/lualine.nvim' -- Statusline
+    use 'fannheyward/telescope-coc.nvim'
+    use "preservim/nerdtree"
 
     --> Syntax
     use {
@@ -57,10 +67,8 @@ packer.startup(function(use)
     use 'windwp/nvim-ts-autotag'
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/zen-mode.nvim'
-
-
-    use 'fannheyward/telescope-coc.nvim'
-
+    use "ryanoasis/vim-devicons"
+    use 'tpope/vim-surround'
 
     --> Clipboard
     use 'christoomey/vim-system-copy'
