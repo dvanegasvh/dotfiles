@@ -40,7 +40,9 @@ keymap.set("n", "<space>rn", "<Plug>(coc-rename)", {})
 keymap.set("n", "<space>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 keymap.set("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 keymap.set("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
--- keymap.set("i", "<TAB>", "coc#pum#visible() ? coc#pum#confirm() : '\tab'", {silent = true, expr = true, noremap = true})
+keymap.set("n", "<space>s", ":HopChar2<cr>")
+-- keymap.set("n", "<space>s", ':call feedkeys("\\<Plug>(easymotion-s2)")<CR>')
+
 
 --> Execution
 keymap.set("n", ";;", execute_file )

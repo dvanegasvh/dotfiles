@@ -10,3 +10,7 @@ function execute_file()
     }
     vim.cmd(languages[filetype].action)
 end
+
+function easy_motion()
+    vim.cmd("<Plug>(easymotion-s2)")
+end

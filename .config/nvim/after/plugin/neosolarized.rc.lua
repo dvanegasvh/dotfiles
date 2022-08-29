@@ -19,6 +19,7 @@ Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1
 Group.new('Visual', colors.none, colors.base03, styles.reverse)
 Group.new('Pmenu', groups.Normal, colors.terminal, styles.none) -- popup menu normal item
 
+
 local cError = groups.Error.fg
 local cInfo = groups.Information.fg
 local cWarn = groups.Warning.fg

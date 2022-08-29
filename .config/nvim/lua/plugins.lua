@@ -11,20 +11,21 @@ packer.startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
-    use {
-        'svrana/neosolarized.nvim',
-        requires = { 'tjdevries/colorbuddy.nvim' }
-    }
 
 
+    --> Identation
     use 'tpope/vim-sleuth'
-    -- use "sheerun/vim-polyglot"
 
     --> Themes
     use({ "olimorris/onedarkpro.nvim" })
     use "Shatur/neovim-ayu"
     use("marko-cerovac/material.nvim")
     use("christianchiarulli/nvcode-color-schemes.vim")
+    --[[ use { ]]
+    --[[     'svrana/neosolarized.nvim', ]]
+    --[[     requires = { 'tjdevries/colorbuddy.nvim' } ]]
+    --[[ } ]]
+    use 'folke/tokyonight.nvim'
 
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
@@ -49,9 +50,9 @@ packer.startup(function(use)
     }
 
     --> Comments
-    use 'numToStr/Comment.nvim'
-    use 'terryma/vim-multiple-cursors'
-    use 'JoosepAlviste/nvim-ts-context-commentstring'
+     use 'numToStr/Comment.nvim'
+     use 'terryma/vim-multiple-cursors'
+     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     --> Git
     use 'lewis6991/gitsigns.nvim'
@@ -69,6 +70,14 @@ packer.startup(function(use)
     use 'folke/zen-mode.nvim'
     use "ryanoasis/vim-devicons"
     use 'tpope/vim-surround'
+    use {
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+      config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      end
+    }
 
     --> Clipboard
     use 'christoomey/vim-system-copy'

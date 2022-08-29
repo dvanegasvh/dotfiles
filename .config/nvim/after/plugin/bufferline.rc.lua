@@ -11,18 +11,25 @@ bufferline.setup({
     color_icons = true,
   },
 
-
-
-  highlights = {
+   highlights = {
+    separator = {
+      fg = '#15161e',
+      bg = '#15161e',
+    },
+    separator_selected = {
+      fg = '#657b83',
+    },
     background = {
-      guifg = '#657b83',
-      -- guibg = '#002b36'
+      fg = '#657b83',
+      bg = '#15161e'
     },
     buffer_selected = {
-      guifg = '#fdf6e3',
-      guibg = '#011c21',
-      gui = "bold",
+      fg = '#fdf6e3',
+      bold = true,
     },
+    fill = {
+      bg = '#073642'
+    }
   },
 
 })
