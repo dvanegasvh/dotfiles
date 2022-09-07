@@ -46,5 +46,9 @@ keymap.set("n", "<space>s", ":HopChar2<cr>")
 
 --> Execution
 keymap.set("n", ";;", execute_file )
+keymap.set("n", "<space>o", ':TSCaptureUnderCursor<cr>')
+
+
+
 
 keymap.set("n", "<space>nt", ":NERDTreeFind<cr>")

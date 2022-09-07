@@ -10,23 +10,18 @@ packer.startup(function(use)
     --> Packer
     use 'wbthomason/packer.nvim'
 
-    use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
-
-
     --> Identation
     use 'tpope/vim-sleuth'
+    use 'nvim-treesitter/playground'
+    use "lukas-reineke/indent-blankline.nvim"
 
     --> Themes
-    use({ "olimorris/onedarkpro.nvim" })
     use "Shatur/neovim-ayu"
-    use("marko-cerovac/material.nvim")
-    use("christianchiarulli/nvcode-color-schemes.vim")
-    --[[ use { ]]
-    --[[     'svrana/neosolarized.nvim', ]]
-    --[[     requires = { 'tjdevries/colorbuddy.nvim' } ]]
-    --[[ } ]]
-    use 'folke/tokyonight.nvim'
-
+    use 'dvanegasvh/test'
+    -- use {
+    --   'svrana/neosolarized.nvim',
+    --    requires = { 'tjdevries/colorbuddy.nvim' }
+    -- }
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
     -- use 'github/copilot.vim'
@@ -41,7 +36,8 @@ packer.startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'fannheyward/telescope-coc.nvim'
-    use "preservim/nerdtree"
+    -- use "preservim/nerdtree"
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 
     --> Syntax
     use {
@@ -64,12 +60,14 @@ packer.startup(function(use)
 
     --> IDE
     use 'kyazdani42/nvim-web-devicons' -- File icons
+    use {"p00f/nvim-ts-rainbow"}
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
     use 'norcalli/nvim-colorizer.lua'
     use 'folke/zen-mode.nvim'
     use "ryanoasis/vim-devicons"
     use 'tpope/vim-surround'
+
     use {
       'phaazon/hop.nvim',
       branch = 'v2', -- optional but strongly recommended
