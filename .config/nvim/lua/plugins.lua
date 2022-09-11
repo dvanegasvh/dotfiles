@@ -18,13 +18,8 @@ packer.startup(function(use)
     --> Themes
     use "Shatur/neovim-ayu"
     use 'dvanegasvh/test'
-    -- use {
-    --   'svrana/neosolarized.nvim',
-    --    requires = { 'tjdevries/colorbuddy.nvim' }
-    -- }
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
-    -- use 'github/copilot.vim'
 
     --> Coc
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
@@ -36,8 +31,7 @@ packer.startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lualine/lualine.nvim' -- Statusline
     use 'fannheyward/telescope-coc.nvim'
-    -- use "preservim/nerdtree"
-    use { "nvim-telescope/telescope-file-browser.nvim" }
+    use "preservim/nerdtree"
 
     --> Syntax
     use {
