@@ -1,0 +1,101 @@
+env:
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 8
+    y: 2
+
+  opacity: 0.97
+  decorations: buttonless
+
+font:
+  normal:
+    family: jetBrainsMono Nerd Font
+    style: Medium
+
+  bold:
+    family: jetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: jetBrainsMono Nerd Font
+    style: Italic
+
+  size: 13.0
+
+  offset:
+    x: 1
+    y: 4
+
+  glyph_offset:
+    x: 0
+    y: 2
+
+  use_thin_strokes: false
+
+draw_bold_text_with_bright_colors: true
+
+mouse:
+  hide_when_typing: true
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+colors:
+  name: TokyoNight Night
+  author: Folke
+  # Default colors
+  cursor:
+    cursor: '#9a48ed'
+
+  primary:
+    background: '0x0a0a0d'
+    foreground: '0xc0caf5'
+
+  # Normal colors
+  normal:
+    black: '#15161E'
+    red: '#e27081'
+    green: '#b5e593'
+    yellow: '#f5c876'
+    blue: '#83c1f0'
+    magenta: '#bdb5f8'
+    cyan: '#7dcfff'
+    white: '#a9b1d6'
+
+  # Bright colors
+  bright:
+    black: '#414868'
+    red: '#e27081'
+    green: '#b5e593'
+    yellow: '#f5c876'
+    blue: '#83c1f0'
+    magenta: '#bdb5f8'
+    cyan: '#7dcfff'
+    white: '#c0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
+
+key_bindings:
+  - { key: V, mods: Command, action: Paste }
+  - { key: C, mods: Command|Shift, action: Copy }
+  - { key: T, mods: Command, chars: "\x02c" }
+  - { key: W, mods: Command, chars: "\x02x" }
+  - { key: D, mods: Command, chars: "\x02%" }
+  - { key: D, mods: Command|Shift, chars: "\x02\"" }
+  - { key: P, mods: Command, chars: "\x02n" }
+  - { key: N, mods: Command, chars: "\x02p" }
+  - { key: H, mods: Shift|Command, chars: "\x02H" }
+  - { key: L, mods: Shift|Command, chars: "\x02L" }
+  - { key: K, mods: Shift|Command, chars: "\x02[" }
+  - { key: J, mods: Shift|Command, chars: "\x02J" }
+  - { key: H, mods: Option, chars: "\x02h" }
+  - { key: L, mods: Option, chars: "\x02l" }
+  - { key: K, mods: Option, chars: "\x02k" }
+  - { key: J, mods: Option, chars: "\x02j" }
+  - { key: G, mods: Control, chars: "\x02g" }
+
+theme: Tokyonight_Night

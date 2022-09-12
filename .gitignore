@@ -1,9 +1,3 @@
 # COC 
-./.config/coc/commands
-./.config/coc/extensions/db.json
-./.config/coc/extensions/coc-lua-data
-./.config/coc/extensions/node_modules
 ./.config/coc/
-
-
 

@@ -1,11 +1,14 @@
-require("base")
-require("highlights")
-require("maps")
-require("plugins")
+require("dvanegas.base")
+require("dvanegas.highlights")
+require("dvanegas.maps")
+require("dvanegas.plugins")
 
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_style = "night"
-vim.cmd 'colorscheme blackdot'
+--vim.g.tokyonight_transparent = true
+--vim.g.tokyonight_style = "night"
+--vim.cmd 'colorscheme blackdot'
+vim.g.material_style = "deep ocean"
+vim.cmd 'colorscheme material'
+
 vim.cmd("let g:autopep8_disable_show_diff=1")
 vim.cmd("let g:autopep8_on_save=1")
 vim.cmd("let g:floaterm_position = 'bottom'")
@@ -15,6 +18,8 @@ vim.cmd("let NERDTreeMapOpenVSplit='S'")
 vim.cmd('inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "<Tab>"')
 vim.cmd('let g:indent_blankline_char_list = ["▏"]' )
 vim.cmd('let g:indent_blankline_context_char = "▏"')
+
 vim.cmd('let g:indent_blankline_use_treesitter_scope = v:true')
+vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
 
 
