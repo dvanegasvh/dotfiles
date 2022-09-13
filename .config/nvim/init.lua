@@ -3,12 +3,6 @@ require("dvanegas.highlights")
 require("dvanegas.maps")
 require("dvanegas.plugins")
 
---vim.g.tokyonight_transparent = true
---vim.g.tokyonight_style = "night"
---vim.cmd 'colorscheme blackdot'
-vim.g.material_style = "deep ocean"
-vim.cmd 'colorscheme material'
-
 vim.cmd("let g:autopep8_disable_show_diff=1")
 vim.cmd("let g:autopep8_on_save=1")
 vim.cmd("let g:floaterm_position = 'bottom'")

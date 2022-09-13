@@ -17,6 +17,9 @@ packer.startup(function(use)
     --> Search diagnostic
     use {'fannheyward/telescope-coc.nvim'}
 
+    --> Identation
+    use {'tpope/vim-sleuth'}
+
     --> File search
     use { 'nvim-telescope/telescope.nvim' }
     use {'preservim/nerdtree'}
