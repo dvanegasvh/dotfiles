@@ -3,6 +3,8 @@ require("dvanegas.highlights")
 require("dvanegas.maps")
 require("dvanegas.plugins")
 
+vim.cmd 'let g:gruvbox_contrast_dark="hard"'
+vim.cmd 'colorscheme gruvbox'
 vim.cmd("let g:autopep8_disable_show_diff=1")
 vim.cmd("let g:autopep8_on_save=1")
 vim.cmd("let g:floaterm_position = 'bottom'")

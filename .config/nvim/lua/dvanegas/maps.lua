@@ -27,8 +27,8 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<space>w', ':w<cr>')
-keymap.set('n', '<space>q', ':bd<cr>')
-keymap.set('n', '<space>Q', ':q<cr>')
+-- keymap.set('n', '<space>q', ':bd<cr>')
+keymap.set('n', '<space>q', ':q<cr>')
 
 --> COC
 keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
@@ -41,5 +41,6 @@ keymap.set("n", "<space>s", ":HopChar2<cr>")
 
 
 --> Execution
--- keymap.set("n", "<space>o", ':TSCaptureUnderCursor<cr>')
 keymap.set("n", "<space>nt", ":NERDTreeFind<cr>")
+keymap.set("n", "<space>b", ":NvimTreeToggle<cr>")
+

@@ -14,7 +14,7 @@ ts.setup {
     colors = {'#3794ff', '#ea8bf0', '#ffcc00'}, -- table of hex strings
   },
   indent = {
-    enable = true,
+    enable = false,
   },
   ensure_installed = {
     "javascript",

@@ -13,16 +13,22 @@ packer.startup(function(use)
     use {'marko-cerovac/material.nvim'}
     --> Languague server
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
+    use {'morhetz/gruvbox'}
 
     --> Search diagnostic
     use {'fannheyward/telescope-coc.nvim'}
 
+
+    use {'edluffy/hologram.nvim'}
+
     --> Identation
-    use {'tpope/vim-sleuth'}
+    -- use {'tpope/vim-sleuth'}
+    use {'sheerun/vim-polyglot'}
 
     --> File search
     use { 'nvim-telescope/telescope.nvim' }
     use {'preservim/nerdtree'}
+    -- use {'kyazdani42/nvim-tree.lua'}
 
     --> Syntax
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -62,9 +68,7 @@ packer.startup(function(use)
 
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
-    use { 'goolord/alpha-nvim', config = function () require'alpha'.setup(require'alpha.themes.startify'.config) end }
-
-
+    use {'chiedo/vim-px-to-em'}
 
 
 end)
