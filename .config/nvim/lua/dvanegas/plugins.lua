@@ -13,7 +13,11 @@ packer.startup(function(use)
     use {'marko-cerovac/material.nvim'}
     --> Languague server
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
-    use {'morhetz/gruvbox'}
+    -- use {'morhetz/gruvbox'}
+    -- use {'luisiacc/gruvbox-baby', branch ='main'}
+    use { "ellisonleao/gruvbox.nvim" }
+
+    use {"sbdchd/neoformat"}
 
     --> Search diagnostic
     use {'fannheyward/telescope-coc.nvim'}

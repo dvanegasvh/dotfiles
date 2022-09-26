@@ -34,10 +34,11 @@ keymap.set('n', '<space>q', ':q<cr>')
 keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
 keymap.set("n", "K", ":call CocActionAsync('doHover')<CR>", {silent = true, noremap = true})
 keymap.set("n", "<space>rn", "<Plug>(coc-rename)", {})
-keymap.set("n", "<space>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
+-- keymap.set("n", "<space>f", ":CocCommand prettier.formatFile<CR>", {noremap = true})
 keymap.set("i", "<C-Space>", "coc#refresh()", { silent = true, expr = true })
 keymap.set("i", "<CR>", "coc#pum#visible() ? coc#pum#confirm() : '<C-g>u<CR><c-r>=coc#on_enter()<CR>'", {silent = true, expr = true, noremap = true})
 keymap.set("n", "<space>s", ":HopChar2<cr>")
+keymap.set("n", "<space>f", ":Neoformat<cr>")
 
 
 --> Execution

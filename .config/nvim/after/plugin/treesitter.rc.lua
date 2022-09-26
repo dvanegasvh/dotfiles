@@ -3,9 +3,13 @@ local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 ts.setup {
+  ensure_installed = "maintained",
   highlight = {
     enable = true,
-    disable = {},
+    additional_vim_regex_highlighting = true,
+  },
+  indent = {
+    enable = false,
   },
   rainbow = {
     enable = true,
@@ -13,13 +17,10 @@ ts.setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
     colors = {'#3794ff', '#ea8bf0', '#ffcc00'}, -- table of hex strings
   },
-  indent = {
-    enable = false,
-  },
   ensure_installed = {
     "javascript",
     "typescript",
-    "tsx",
+    -- "tsx",
     "json",
     "yaml",
     "css",
