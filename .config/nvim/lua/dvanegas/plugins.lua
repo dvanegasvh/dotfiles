@@ -22,17 +22,12 @@ packer.startup(function(use)
     --> Search diagnostic
     use {'fannheyward/telescope-coc.nvim'}
 
-
-    use {'edluffy/hologram.nvim'}
-
     --> Identation
-    -- use {'tpope/vim-sleuth'}
     use {'sheerun/vim-polyglot'}
 
     --> File search
     use { 'nvim-telescope/telescope.nvim' }
     use {'preservim/nerdtree'}
-    -- use {'kyazdani42/nvim-tree.lua'}
 
     --> Syntax
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -73,6 +68,7 @@ packer.startup(function(use)
     --> Utils
     use 'nvim-lua/plenary.nvim' -- Common utilities
     use {'chiedo/vim-px-to-em'}
+    use {'tpope/vim-surround'}
 
 
 end)

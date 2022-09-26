@@ -16,7 +16,15 @@ require("gruvbox").setup({
   inverse = true, -- invert background for search, diffs, statuslines and errors
   contrast = "hard", -- can be "hard", "soft" or empty string
   overrides = {
-        -- SignColumn = {bg = "#"}
+    SignColumn = {bg = "#1d2021"},
+    ColorColumn = { bg = "#1d2021" },
+     FoldColumn = { bg = "#1d2021"},
+     GruvboxGreenSign = { bg ='#1d2021'},
+     GruvboxBlueSign = { bg ='#1d2021'},
+     GruvboxYellowSign = { bg ='#1d2021'},
+     GruvboxRedSign = { bg ='#1d2021'},
+     GruvboxPurpleSign = { bg ='#1d2021'},
+     GruvboxAquaSign = { bg ='#1d2021'},
   },
   dim_inactive = false,
   transparent_mode = true,
