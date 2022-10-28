@@ -28,6 +28,7 @@ packer.startup(function(use)
     --> File search
     use { 'nvim-telescope/telescope.nvim' }
     use {'preservim/nerdtree'}
+    use {'editorconfig/editorconfig-vim'}
 
     --> Syntax
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}

@@ -3,33 +3,42 @@ require("dvanegas.highlights")
 require("dvanegas.maps")
 require("dvanegas.plugins")
 
-require("gruvbox").setup({
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = true,
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "hard", -- can be "hard", "soft" or empty string
-  overrides = {
-    SignColumn = {bg = "#1d2021"},
-    ColorColumn = { bg = "#1d2021" },
-     FoldColumn = { bg = "#1d2021"},
-     GruvboxGreenSign = { bg ='#1d2021'},
-     GruvboxBlueSign = { bg ='#1d2021'},
-     GruvboxYellowSign = { bg ='#1d2021'},
-     GruvboxRedSign = { bg ='#1d2021'},
-     GruvboxPurpleSign = { bg ='#1d2021'},
-     GruvboxAquaSign = { bg ='#1d2021'},
-  },
-  dim_inactive = false,
-  transparent_mode = true,
+require('material').setup({
+    disable = {
+        background = true, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
+    },
 })
+-- require("gruvbox").setup({
+--   undercurl = true,
+--   underline = true,
+--   bold = true,
+--   italic = true,
+--   strikethrough = true,
+--   invert_selection = false,
+--   invert_signs = false,
+--   invert_tabline = false,
+--   invert_intend_guides = false,
+--   inverse = true, -- invert background for search, diffs, statuslines and errors
+--   contrast = "hard", -- can be "hard", "soft" or empty string
+--   overrides = {
+--     SignColumn = {bg = "#1d2021"},
+--     ColorColumn = { bg = "#1d2021" },
+--      FoldColumn = { bg = "#1d2021"},
+--      GruvboxGreenSign = { bg ='#1d2021'},
+--      GruvboxBlueSign = { bg ='#1d2021'},
+--      GruvboxYellowSign = { bg ='#1d2021'},
+--      GruvboxRedSign = { bg ='#1d2021'},
+--      GruvboxPurpleSign = { bg ='#1d2021'},
+--      GruvboxAquaSign = { bg ='#1d2021'},
+--   },
+--   dim_inactive = false,
+--   transparent_mode = true,
+-- })
+
+
+vim.g.material_style = "deep ocean"
 vim.cmd 'colorscheme gruvbox'
+
 vim.cmd("let g:autopep8_disable_show_diff=1")
 vim.cmd("let g:autopep8_on_save=1")
 vim.cmd("let g:floaterm_position = 'bottom'")
@@ -40,8 +49,9 @@ vim.cmd('inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "
 vim.cmd('let g:indent_blankline_char_list = ["▏"]' )
 vim.cmd('let g:indent_blankline_context_char = "▏"')
 
-vim.cmd('autocmd BufWritePre * undojoin | Neoformat')
+-- vim.cmd('autocmd BufWritePre * undojoin | Neoformat')
 vim.cmd('let g:indent_blankline_use_treesitter_scope = v:true')
 vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
+vim.cmd("let g:neoformat_enabled_typescript = ['prettierd']")
 
 

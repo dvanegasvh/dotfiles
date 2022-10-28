@@ -36,4 +36,4 @@ vim.keymap.set('n', ';t', function()
 end)
 
 vim.keymap.set('n', ';a', ':Telescope coc diagnostics<cr>')
-vim.keymap.set('n', '<space>ca', ':Telescope coc line_code_actions<cr>')
+vim.keymap.set('n', '<space>ca', ':Telescope coc code_actions<cr>')

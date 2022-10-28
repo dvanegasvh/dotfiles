@@ -6,7 +6,7 @@ window:
     x: 8
     y: 2
 
-  opacity: 0.99
+  opacity: 0.97
   decorations: buttonless
 
 font:
@@ -41,34 +41,20 @@ mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '#1d2021'
-    background: '#1e1e1e'
-    # soft contrast: background = '#32302f'
-    foreground: '#ebdbb2'
-
-  # Normal colors
+    background: '0x0f111a'
+    foreground: '0xD8DEE9'
+  cursor:
+    cursor: '0xffcc00'
   normal:
-    black: '#282828'
-    red: '#cc241d'
-    green: '#98971a'
-    yellow: '#d79921'
-    blue: '#458588'
-    magenta: '#b16286'
-    cyan: '#689d6a'
-    white: '#a89984'
-
-  # Bright colors
-  bright:
-    black: '#928374'
-    red: '#fb4934'
-    green: '#b8bb26'
-    yellow: '#fabd2f'
-    blue: '#83a598'
-    magenta: '#d3869b'
-    cyan: '#8ec07c'
-    white: '#ebdbb2'
+    black:      '0x4C566A'
+    red:        '0xBF616A'
+    green:      '0xA3BE8C'
+    yellow:     '0xEBCB8B'
+    blue:       '0x81A1C1'
+    magenta:    '0xB48EAD'
+    cyan:       '0x88C0D0'
+    white:      '0xE5E9F0'
 
 key_bindings:
   - { key: V, mods: Command, action: Paste }
@@ -89,4 +75,4 @@ key_bindings:
   - { key: J, mods: Option, chars: "\x02j" }
   - { key: G, mods: Control, chars: "\x02g" }
 
-theme: Gruvbox-Dark
+theme: Ocean.dark
