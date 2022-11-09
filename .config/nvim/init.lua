@@ -1,57 +1,45 @@
-require("dvanegas.base")
-require("dvanegas.highlights")
-require("dvanegas.maps")
-require("dvanegas.plugins")
+require('base')
+require('highlights')
+require('plugins')
+require('maps')
 
-require('material').setup({
-    disable = {
-        background = true, -- Prevent the theme from setting the background (NeoVim then uses your teminal background)
-    },
+
+require("tokyonight").setup({
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  light_style = "day", -- The theme is used when the background is set to light
+  transparent = true, -- Enable this to disable setting the background color
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
+  styles = {
+    -- Style to be applied to different syntax groups
+    -- Value is any valid attr-list value for `:help nvim_set_hl`
+    comments = { italic = true },
+    keywords = { italic = true },
+    functions = {},
+    variables = {},
+    -- Background styles. Can be "dark", "transparent" or "normal"
+    sidebars = "light", -- style for sidebars, see below
+    floats = "light", -- style for floating windows
+  },
+  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
+  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
+  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
+  dim_inactive = false, -- dims inactive windows
+  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+
+  on_colors = function(colors) end,
+
+  on_highlights = function(highlights, colors) end,
 })
--- require("gruvbox").setup({
---   undercurl = true,
---   underline = true,
---   bold = true,
---   italic = true,
---   strikethrough = true,
---   invert_selection = false,
---   invert_signs = false,
---   invert_tabline = false,
---   invert_intend_guides = false,
---   inverse = true, -- invert background for search, diffs, statuslines and errors
---   contrast = "hard", -- can be "hard", "soft" or empty string
---   overrides = {
---     SignColumn = {bg = "#1d2021"},
---     ColorColumn = { bg = "#1d2021" },
---      FoldColumn = { bg = "#1d2021"},
---      GruvboxGreenSign = { bg ='#1d2021'},
---      GruvboxBlueSign = { bg ='#1d2021'},
---      GruvboxYellowSign = { bg ='#1d2021'},
---      GruvboxRedSign = { bg ='#1d2021'},
---      GruvboxPurpleSign = { bg ='#1d2021'},
---      GruvboxAquaSign = { bg ='#1d2021'},
---   },
---   dim_inactive = false,
---   transparent_mode = true,
--- })
 
+vim.cmd 'colorscheme tokyonight-night'
 
-vim.g.material_style = "deep ocean"
-vim.cmd 'colorscheme gruvbox'
-
-vim.cmd("let g:autopep8_disable_show_diff=1")
-vim.cmd("let g:autopep8_on_save=1")
-vim.cmd("let g:floaterm_position = 'bottom'")
-vim.cmd("let g:floaterm_width = 1.0")
+--> Custom configs
 vim.cmd("let NERDTreeQuitOnOpen=1")
 vim.cmd("let NERDTreeMapOpenVSplit='S'")
 vim.cmd('inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "<Tab>"')
 vim.cmd('let g:indent_blankline_char_list = ["▏"]' )
 vim.cmd('let g:indent_blankline_context_char = "▏"')
-
--- vim.cmd('autocmd BufWritePre * undojoin | Neoformat')
 vim.cmd('let g:indent_blankline_use_treesitter_scope = v:true')
-vim.cmd('autocmd FileType scss setl iskeyword+=@-@')
-vim.cmd("let g:neoformat_enabled_typescript = ['prettierd']")
-
 
