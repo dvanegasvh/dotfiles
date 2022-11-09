@@ -3,10 +3,10 @@ env:
 
 window:
   padding:
-    x: 8
-    y: 5
+    x: 3
+    y: 0
 
-  opacity: 1
+  opacity: 0.99
   decorations: buttonless
 
 font:
@@ -16,8 +16,6 @@ font:
 
   bold:
     family: jetBrainsMono Nerd Font
-    style: Bold
-
   italic:
     family: jetBrainsMono Nerd Font
     style: Italic
@@ -26,7 +24,7 @@ font:
 
   offset:
     x: 1
-    y: 5
+    y: 4
 
   glyph_offset:
     x: 0
@@ -42,33 +40,49 @@ mouse:
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
+# cursor:
+#   style: Block
+#
+#   Underline:
+#     # I doubt you want less width for this thing.
+#     height: 0.5 - 2
+#   Block:
+#     height: 0.5 - 1
+#     width: 10 - 3
+#
 colors:
+  name: TokyoNight Night
+  author: Folke
   # Default colors
   primary:
-    background: '#0A0E14'
-    foreground: '#B3B1AD'
+    background: '0x1a1b26'
+    foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black: '#01060E'
-    red: '#EA6C73'
-    green: '#91B362'
-    yellow: '#F9AF4F'
-    blue: '#53BDFA'
-    magenta: '#FAE994'
-    cyan: '#90E1C6'
-    white: '#C7C7C7'
+    black: '0x15161E'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xa9b1d6'
 
   # Bright colors
   bright:
-    black: '#686868'
-    red: '#F07178'
-    green: '#C2D94C'
-    yellow: '#FFB454'
-    blue: '#59C2FF'
-    magenta: '#FFEE99'
-    cyan: '#95E6CB'
-    white: '#FFFFFF'
+    black: '0x414868'
+    red: '0xf7768e'
+    green: '0x9ece6a'
+    yellow: '0xe0af68'
+    blue: '0x7aa2f7'
+    magenta: '0xbb9af7'
+    cyan: '0x7dcfff'
+    white: '0xc0caf5'
+
+  indexed_colors:
+    - { index: 16, color: '0xff9e64' }
+    - { index: 17, color: '0xdb4b4b' }
 
 key_bindings:
   - { key: V, mods: Command, action: Paste }
@@ -89,4 +103,4 @@ key_bindings:
   - { key: J, mods: Option, chars: "\x02j" }
   - { key: G, mods: Control, chars: "\x02g" }
 
-theme: Ayu-Dark
+theme: Tokyonight_Night
