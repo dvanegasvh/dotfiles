@@ -27,10 +27,15 @@ alias lla="ll -a"
 alias nt="npm run test"
 alias t="~/./tmux-start.sh"
 alias gc="lazygit"
+# alias glog='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --decorate --date=short --color | head -n 20'
+alias hist='git log --pretty=format:"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)" --graph --date=relative --decorate --all'
+alias glog='git log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset" --date=relative'
 
-# Keymaps
-bindkey -s "^f" 'fzf^M'
-bindkey -s "^n" 'nvim $(fzf)^M'
+# # Keymaps
+# bindkey -s "^f" 'fzf^M'
+# bindkey -s "^n" 'nvim $(fzf)^M'
+
+source ./peco.zsh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
