@@ -14,7 +14,6 @@ telescope.setup {
   },
 }
 
-telescope.load_extension("coc")
 
 vim.keymap.set('n', ';f',
   function()
@@ -34,6 +33,3 @@ end)
 vim.keymap.set('n', ';t', function()
   builtin.treesitter()
 end)
-
-vim.keymap.set('n', ';a', ':Telescope coc diagnostics<cr>')
-vim.keymap.set('n', '<space>ca', ':Telescope coc code_actions<cr>')
