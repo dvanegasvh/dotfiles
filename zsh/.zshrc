@@ -35,7 +35,7 @@ alias glog='git log --graph --name-status --pretty=format:"%C(red)%h %C(reset)(%
 # bindkey -s "^f" 'fzf^M'
 # bindkey -s "^n" 'nvim $(fzf)^M'
 
-source ./peco.zsh
+source $HOME/peco.zsh
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
