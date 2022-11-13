@@ -112,6 +112,7 @@
   // "diagnostic.virtualTextPrefix": "● ",
   // "diagnostic.level": "error",
   //"diagnostic.level": "hint",
-  "diagnostic.virtualTextCurrentLineOnly": true
+  "diagnostic.virtualTextCurrentLineOnly": true,
+  "coc.preferences.extensionUpdateCheck": "daily"
   // "diagnostic.enableMessage": "never"
 }
