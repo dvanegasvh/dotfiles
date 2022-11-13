@@ -15,7 +15,6 @@ keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 
 --> Move window
-keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
 keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
@@ -27,8 +26,8 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<space>w', ':w<cr>')
-keymap.set('n', '<space>q', ':q<cr>')
-keymap.set('n', '<space>Q', ':q!<cr>')
+-- keymap.set('n', '<space>q', ':q<cr>')
+keymap.set('n', '<space>x', ':q<cr>')
 
 --> COC
 keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})

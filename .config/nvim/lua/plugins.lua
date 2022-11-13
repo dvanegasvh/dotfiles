@@ -23,12 +23,17 @@ packer.startup(function(use)
 
     --> Identation
     use {'sheerun/vim-polyglot'}
-    use "lukas-reineke/indent-blankline.nvim"
+    use { "lukas-reineke/indent-blankline.nvim" }
 
 
     --> File search
     use { 'nvim-telescope/telescope.nvim' }
-    use {'preservim/nerdtree'}
+    use { 'preservim/nerdtree' }
+    use { 'nvim-tree/nvim-web-devicons' }
+    use { 'nvim-tree/nvim-tree.lua' }
+
+    
+    --> Editor config
     use {'editorconfig/editorconfig-vim'}
 
     --> Syntax
@@ -41,7 +46,6 @@ packer.startup(function(use)
 
     --> Git
     use {'lewis6991/gitsigns.nvim'} 
-    use {'dinhhuy258/git.nvim'} 
 
     --> Tabs
     use {'akinsho/nvim-bufferline.lua'}

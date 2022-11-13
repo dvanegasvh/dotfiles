@@ -34,6 +34,7 @@ require("tokyonight").setup({
 })
 
 vim.cmd 'colorscheme tokyonight-night'
+-- vim.cmd 'colorscheme material'
 
 --> Custom configs
 vim.cmd("let NERDTreeQuitOnOpen=1")
