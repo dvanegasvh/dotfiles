@@ -39,7 +39,8 @@ keymap.set("n", "<space>s", ":HopChar2<cr>")
 keymap.set("n", "<space>t", ":CocCommand jest.fileTest<cr>")
 
 --> NERD Tree
-keymap.set("n", "<space>nt", ":NERDTreeFind<cr>")
+-- keymap.set("n", "<space>nt", ":NERDTreeFind<cr>")
+keymap.set("n", "<space>nt", ":NvimTreeFindFile<CR>")
 
 -- Run files
 keymap.set("n", "<space>rf", ":FlowRunFile<cr>")

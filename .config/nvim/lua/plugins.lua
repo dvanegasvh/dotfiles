@@ -8,29 +8,24 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
     --> Packer
     use {'wbthomason/packer.nvim'}
+
     --> Themes
-    use {'marko-cerovac/material.nvim'}
-    --> Languague server
-    use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
-    use { "ellisonleao/gruvbox.nvim" }
     use {'folke/tokyonight.nvim'}
 
-
-    use {"sbdchd/neoformat"}
+    --> Languague server
+    use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
 
     --> Search diagnostic
     use {'fannheyward/telescope-coc.nvim'}
 
     --> Identation
     use {'sheerun/vim-polyglot'}
-    use { "lukas-reineke/indent-blankline.nvim" }
+    use {'lukas-reineke/indent-blankline.nvim'}
 
 
     --> File search
-    use { 'nvim-telescope/telescope.nvim' }
-    use { 'preservim/nerdtree' }
-    use { 'nvim-tree/nvim-web-devicons' }
-    use { 'nvim-tree/nvim-tree.lua' }
+    use {'nvim-telescope/telescope.nvim'}
+    use {'nvim-tree/nvim-tree.lua'}
 
     
     --> Editor config
@@ -66,13 +61,13 @@ packer.startup(function(use)
     use {'christoomey/vim-system-copy'}
 
     --> Search words
-    use { 'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
+    use {'phaazon/hop.nvim', branch = 'v2', config = function() require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' } end }
 
     --> Status line
     use {'nvim-lualine/lualine.nvim'}
 
     --> Utils
-    use 'nvim-lua/plenary.nvim' -- Common utilities
+    use {'nvim-lua/plenary.nvim'}
     use {'tpope/vim-surround'}
     use {'arjunmahishi/flow.nvim'}
 

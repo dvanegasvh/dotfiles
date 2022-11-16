@@ -13,13 +13,13 @@ ts.setup {
   },
   rainbow = {
     enable = true,
-    extended_mode = false, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+    extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
-    colors = {'#3794ff', '#ea8bf0', '#ffcc00'}, -- table of hex strings
   },
   ensure_installed = {
     "javascript",
     "typescript",
+    "tsx",
     "json",
     "css",
     "html",
@@ -31,7 +31,10 @@ ts.setup {
   },
 }
 
-vim.cmd('hi rainbowcol1 guifg=#ffcc00')
+vim.cmd('hi rainbowcol1 guifg=#7dcfff')
+vim.cmd('hi rainbowcol2 guifg=#bb9af7')
+vim.cmd('hi rainbowcol3 guifg=#e0af68')
+vim.cmd('hi rainbowcol4 guifg=#f7768e')
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

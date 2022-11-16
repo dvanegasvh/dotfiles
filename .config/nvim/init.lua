@@ -3,7 +3,6 @@ require('highlights')
 require('plugins')
 require('maps')
 
-
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings
@@ -43,4 +42,11 @@ vim.cmd('inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "
 vim.cmd('let g:indent_blankline_char_list = ["▏"]' )
 vim.cmd('let g:indent_blankline_context_char = "▏"')
 vim.cmd('let g:indent_blankline_use_treesitter_scope = v:true')
+
+vim.api.nvim_exec([[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=200}
+  augroup end
+]], false)
 
