@@ -26,8 +26,7 @@ keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<space>w', ':w<cr>')
--- keymap.set('n', '<space>q', ':q<cr>')
-keymap.set('n', '<space>x', ':q<cr>')
+keymap.set('n', '<space>q', ':q<cr>')
 
 --> COC
 keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})

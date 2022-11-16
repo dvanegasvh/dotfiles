@@ -3,7 +3,7 @@ if (not status) then return end
 
 bufferline.setup({
   options = {
-    mode = "buffers",
+    mode = "tabs",
     show_tab_indicators = false,
     always_show_bufferline = false,
     show_buffer_close_icons = false,
@@ -20,4 +20,4 @@ bufferline.setup({
 
 vim.keymap.set('n', '<space>l', '<Cmd>BufferLineCycleNext<CR>', {})
 vim.keymap.set('n', '<space>h', '<Cmd>BufferLineCyclePrev<CR>', {})
-vim.keymap.set('n', '<space>q', ':bd<CR>', {})
+vim.keymap.set('n', '<space>e', ':BufferLinePick<CR>', {})
