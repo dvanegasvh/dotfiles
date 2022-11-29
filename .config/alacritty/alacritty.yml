@@ -16,15 +16,16 @@ font:
 
   bold:
     family: jetBrainsMono Nerd Font
+
   italic:
     family: jetBrainsMono Nerd Font
     style: Italic
 
-  size: 13.0
+  size: 14.0
 
   offset:
     x: 1
-    y: 4
+    y: 8
 
   glyph_offset:
     x: 0
