@@ -5,12 +5,21 @@ end
 
 vim.cmd [[packadd packer.nvim]]
 
+
 packer.startup(function(use)
     --> Packer
     use {'wbthomason/packer.nvim'}
 
     --> Themes
     use {'folke/tokyonight.nvim'}
+    use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }}
+    use { "ellisonleao/gruvbox.nvim" }
+
+
+    -- TODO: Esto es una prubea para ver si esto de verdad sirve.
+    -- FIX: PROBANDO UN FIX AQUI
+    -- NOTE: PROBANDO NOTE
+    -- WARNING: ESTO PUEDO SERVIR TAL VES XD
 
     --> Languague server
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
@@ -22,11 +31,9 @@ packer.startup(function(use)
     use {'sheerun/vim-polyglot'}
     use {'lukas-reineke/indent-blankline.nvim'}
 
-
     --> File search
     use {'nvim-telescope/telescope.nvim'}
-    use {'nvim-tree/nvim-tree.lua'}
-
+    use {'nvim-telescope/telescope-file-browser.nvim'}
     
     --> Editor config
     use {'editorconfig/editorconfig-vim'}
@@ -70,5 +77,5 @@ packer.startup(function(use)
     use {'nvim-lua/plenary.nvim'}
     use {'tpope/vim-surround'}
     use {'arjunmahishi/flow.nvim'}
-
+    use {"folke/todo-comments.nvim"} 
 end)

@@ -3,37 +3,33 @@ require('highlights')
 require('plugins')
 require('maps')
 
-require("tokyonight").setup({
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-  light_style = "day", -- The theme is used when the background is set to light
-  transparent = true, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = true },
-    keywords = { italic = true },
-    functions = {},
-    variables = {},
-    -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "light", -- style for sidebars, see below
-    floats = "light", -- style for floating windows
+require("gruvbox").setup({
+  undercurl = true,
+  underline = true,
+  bold = true,
+  italic = true,
+  strikethrough = true,
+  invert_selection = false,
+  invert_signs = false,
+  invert_tabline = false,
+  invert_intend_guides = false,
+  inverse = true, -- invert background for search, diffs, statuslines and errors
+  contrast = "hard", -- can be "hard", "soft" or empty string
+  palette_overrides = {},
+  overrides = {
+        GitSignsAdd = {fg = '#98971a', bg = 'NONE'},
+        GruvboxBlueSign = { fg = '#83a598', bg = "NONE" },
+        GruvboxPurpleSign = { fg = '#d3869b', bg = "NONE" },
+        GruvboxAquaSign = { fg = '#8ec07c', bg = 'NONE' },
+        GruvboxOrangeSign = { fg = '#fe8019', bg = 'NONE' },
+        GruvboxRedSign = { fg = '#cc241d', bg = 'NONE' }
   },
-  sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
-  day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
-  hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
-  dim_inactive = false, -- dims inactive windows
-  lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
 
-  on_colors = function(colors) end,
-
-  on_highlights = function(highlights, colors) end,
+  dim_inactive = false,
+  transparent_mode = true,
 })
 
-vim.cmd 'colorscheme tokyonight-night'
--- vim.cmd 'colorscheme material'
+vim.cmd 'colorscheme gruvbox'
 
 --> Custom configs
 vim.cmd("let NERDTreeQuitOnOpen=1")
