@@ -10,12 +10,12 @@ bufferline.setup({
     show_close_icon = false,
     color_icons = true,
   },
-  highlights = {
-    separator = {
-      fg = '#1e1e1e',
-      bg = '#1e1e1e',
-    },
-  },
+  -- highlights = {
+  --   separator = {
+  --     fg = '#1e1e1e',
+  --     bg = '#1e1e1e',
+  --   },
+  -- },
 })
 
 vim.keymap.set('n', '<space>l', '<Cmd>BufferLineCycleNext<CR>', {})
