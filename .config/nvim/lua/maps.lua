@@ -30,6 +30,8 @@ keymap.set('n', '<space>q', ':q<cr>')
 
 --> COC
 keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
+
+keymap.set("n", "gd", "<Plug>(coc-definition)", {silent = true})
 keymap.set("n", "K", ":call CocActionAsync('doHover')<CR>", {silent = true, noremap = true})
 keymap.set("n", "<space>rn", "<Plug>(coc-rename)", {})
 keymap.set("n", "<space>f", "<Plug>(coc-format)", {silent = true})
@@ -45,3 +47,4 @@ keymap.set("n", "<space>t", ":CocCommand jest.fileTest<cr>")
 -- Run files
 keymap.set("n", "<space>rf", ":FlowRunFile<cr>")
 keymap.set('v', '<space>rl', ':FlowRunSelected<CR>', {})
+

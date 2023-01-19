@@ -24,7 +24,9 @@ plugins=(
 
 )
 
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=11'
+
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=12,bold,underline"
 
 source $ZSH/oh-my-zsh.sh
 

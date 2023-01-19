@@ -36,6 +36,7 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.updatetime = 200
 vim.opt.timeoutlen = 200                     
 vim.opt.showmode = false  
+vim.opt.pumblend= 20
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

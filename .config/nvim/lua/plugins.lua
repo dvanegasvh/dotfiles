@@ -12,10 +12,7 @@ packer.startup(function(use)
 
     --> Themes
     -- use {'folke/tokyonight.nvim'}
-    -- use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }}
-    -- use { "ellisonleao/gruvbox.nvim" }
-    use {'marko-cerovac/material.nvim'}
-
+    use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }}
 
     --> Languague server
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
@@ -74,6 +71,6 @@ packer.startup(function(use)
     use {'tpope/vim-surround'}
     use {'arjunmahishi/flow.nvim'}
     use {"folke/todo-comments.nvim"} 
-
     use {"github/copilot.vim"}
+
 end)

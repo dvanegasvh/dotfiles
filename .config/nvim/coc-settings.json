@@ -7,6 +7,8 @@
   "python.formatting.autopep8Path": "/usr/local/bin/autopep8",
   "jest.binCommand": "npm run test",
   "coc.preferences.formatOnSave": false,
+  "suggest.enableFloat": false
+  "suggest.detailField"	: false
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de",
     "variable": "\ue79b",
@@ -39,7 +41,6 @@
   "diagnostic.infoSign": " ",
   "diagnostic.hintSign": " ",
   "diagnostic.warningSign": " ",
-  "diagnostic.checkCurrentLine": true,
   "suggest.removeDuplicateItems": true,
   "notification.disabledProgressSources": ["*"],
   "cSpell.userWords": [
@@ -70,6 +71,7 @@
     "ciiu",
     "ciius",
     "datepicker",
+    "desprendibles",
     "diggi",
     "diggipymes",
     "easymotion",
@@ -89,6 +91,7 @@
     "nohl",
     "novedades",
     "parafiscals",
+    "persistor",
     "poppins",
     "pymes",
     "reduxjs",
@@ -115,7 +118,6 @@
   // "diagnostic.virtualTextPrefix": "● ",
   // "diagnostic.level": "error",
   //"diagnostic.level": "hint",
-  "diagnostic.virtualTextCurrentLineOnly": true,
-  "coc.preferences.extensionUpdateCheck": "daily"
+  // "diagnostic.virtualTextCurrentLineOnly": true,
   // "diagnostic.enableMessage": "never"
 }
