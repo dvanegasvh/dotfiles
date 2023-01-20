@@ -19,3 +19,6 @@ vim.api.nvim_exec([[
   augroup end
 ]], false)
 
+vim.cmd('highlight Normal ctermbg=none guibg=none')
+
+

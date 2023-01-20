@@ -13,6 +13,8 @@ packer.startup(function(use)
     --> Themes
     -- use {'folke/tokyonight.nvim'}
     use {'svrana/neosolarized.nvim', requires = { 'tjdevries/colorbuddy.nvim' }}
+    use {'joshdick/onedark.vim'}
+
 
     --> Languague server
     use {'neoclide/coc.nvim', branch = 'release', run = 'yarn install --frozen-lockfile'}
