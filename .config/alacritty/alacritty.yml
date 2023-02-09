@@ -3,8 +3,8 @@ env:
 
 window:
   padding:
-    x: 3
-    y: 0
+    x: 8
+    y: 6
 
   opacity: 0.99
   decorations: buttonless
@@ -21,19 +21,19 @@ font:
     family: jetBrainsMono Nerd Font
     style: Italic
 
-  size: 14.0
+  size: 13.5
 
   offset:
     x: 1
-    y: 8
+    y: 7
 
   glyph_offset:
     x: 0
-    y: 2
+    y: 3
 
   use_thin_strokes: false
 
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 mouse:
   hide_when_typing: true
@@ -41,15 +41,6 @@ mouse:
 mouse_bindings:
   - { mouse: Middle, action: PasteSelection }
 
-# cursor:
-#   style: Block
-#
-#   Underline:
-#     # I doubt you want less width for this thing.
-#     height: 0.5 - 2
-#   Block:
-#     height: 0.5 - 1
-#     width: 10 - 3
 #
 colors:
   name: TokyoNight Night

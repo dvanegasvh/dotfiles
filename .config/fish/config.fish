@@ -16,6 +16,9 @@ alias lla "ll -A"
 alias g git
 alias t ~/./tmux-start.sh
 alias h 'cd ~/'
+alias ns "npm start"
+alias next "npm run next"
+alias ntest "npm run test"
 
 command -qv nvim && alias vim nvim
 
