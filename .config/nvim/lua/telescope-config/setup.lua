@@ -153,6 +153,10 @@ require("telescope").setup({
         },
     },
     extensions = {
+        coc = {
+            theme = 'ivy',
+            prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+        },
         fzy_native = {
             override_generic_sorter = true,
             override_file_sorter = true,
@@ -191,7 +195,9 @@ require("telescope").setup({
         },
     },
 })
+
 _ = require("telescope").load_extension("notify")
 _ = require("telescope").load_extension("file_browser")
 _ = require("telescope").load_extension("ui-select")
 _ = require("telescope").load_extension("fzf")
+_ = require('telescope').load_extension("coc")

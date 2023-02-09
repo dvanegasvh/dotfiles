@@ -37,7 +37,5 @@ map_tele("<leader>bp", "file_browser")
 map_tele("<leader>gs", "git_status")
 map_tele(";a", "diagnostics")
 map_tele("<leader>fp", "my_plugins")
-map_tele("<leader>po", "api_specs")
-map_tele("<leader>pm", "gateway")
 
 return map_tele
